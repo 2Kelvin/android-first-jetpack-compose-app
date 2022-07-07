@@ -3,6 +3,7 @@ package com.example.greetingcard
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Surface(color = Color.Yellow) {
+    Surface(color = Color.Yellow, border = BorderStroke(width = 1.dp, Color.Blue)) {
         Text(text = "I'm a $name!", modifier = Modifier.padding(24.dp))
     }
 }
